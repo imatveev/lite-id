@@ -1,5 +1,6 @@
 # lite-id
-[![Build Status](https://travis-ci.org/imatveev/lite-id.svg?branch=master)](https://travis-ci.org/imatveev/lite-id)<br />
+[![Build Status](https://travis-ci.org/imatveev/lite-id.svg?branch=master)](https://travis-ci.org/imatveev/lite-id)
+![](https://david-dm.org/imatveev/lite-id.svg)<br />
 A simple nodejs module for generate unique string id.
 ## Installation
     npm install lite-id
@@ -21,4 +22,4 @@ With custom length
 
     var id = require('lite-id')(20);
     console.log(id);
-    Result: jXf315M_G10SQKa2786RG
+    //Result: jXf315M_G10SQKa2786RG
