@@ -21,4 +21,4 @@ With custom length
 
     var id = require('lite-id')(20);
     console.log(id);
-    Result: jXf315M_G10SQKa2786RG
+    //Result: jXf315M_G10SQKa2786RG
