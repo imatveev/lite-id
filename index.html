@@ -30,6 +30,34 @@
 <pre><code>npm install lite-id
 </code></pre>
 
+<h2>
+<a id="when-should-i-use-lite-id" class="anchor" href="#when-should-i-use-lite-id" aria-hidden="true"><span class="octicon octicon-link"></span></a>When should I use lite-id?</h2>
+
+<p>You need to generate a simple unique id in code.</p>
+
+<h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
+
+<pre><code>var id = require('lite-id);
+</code></pre>
+
+<h3>
+<a id="idlength" class="anchor" href="#idlength" aria-hidden="true"><span class="octicon octicon-link"></span></a>id([length])</h3>
+
+<p>Generates an id. Optional length is set resulting id length. Default length is 10.</p>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<pre><code>var id = require('lite-id');
+console.log(id());
+//Result: J6YgVpwp1929
+
+var id = require('lite-id')(20);
+console.log(id);
+//Result: jXf315M_G10SQKa2786RG
+</code></pre>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/imatveev/lite-id">Lite-id</a> is maintained by <a href="https://github.com/imatveev">imatveev</a>.</span>
 
