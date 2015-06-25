@@ -16,3 +16,4 @@ describe('add', function(){
         assert.equal(findCollisions(1000), false);
     });
 });
+//"mocha tests/collisionTest.js"
