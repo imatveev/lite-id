@@ -22,7 +22,8 @@
       <h1>
 <a id="lite-id" class="anchor" href="#lite-id" aria-hidden="true"><span class="octicon octicon-link"></span></a>lite-id</h1>
 
-<p>A simple nodejs module for generate unique string id.</p>
+<p><a href="https://travis-ci.org/imatveev/lite-id"><img src="https://travis-ci.org/imatveev/lite-id.svg?branch=master" alt="Build Status"></a><br>
+A simple nodejs module for generate unique string id.</p>
 
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -42,25 +43,49 @@
 </code></pre>
 
 <h3>
-<a id="idlength" class="anchor" href="#idlength" aria-hidden="true"><span class="octicon octicon-link"></span></a>id([length])</h3>
+<a id="idlengthoptions" class="anchor" href="#idlengthoptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>id([length],[options])</h3>
 
-<p>Generates an id. Optional length is set resulting id length. Default length is 10.</p>
+<p>Generates an id. Optional [length] is set resulting id length. Default length is 10. 
+Optional [options] is an object with these defaults:</p>
+
+<pre><code>{chars:'abcdefghijkl-_mnopqrstuvwxyz',
+ strictCase: false
+}
+</code></pre>
+
+<p>You can specify characters by which your id will be generated using a variable chars. 
+strictCase is a boolean that specifies whether to use your character set char strictly following case-sensitive, 
+or randomize case (false - randomizes, true - strictly following case).</p>
 
 <h2>
-<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests</h2>
 
-<p>With default length </p>
+<p>Lite-id have a mocha test to find collisions of generated id. Test for 100,000 generations 
+is passed and showed no conflicts.        </p>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<p>With default length</p>
 
 <pre><code>var id = require('lite-id');
 console.log(id());
 //Result: J6YgVpwp1929
 </code></pre>
 
-<p>With custom length  </p>
+<p>With custom length</p>
 
 <pre><code>var id = require('lite-id')(20);
 console.log(id);
 //Result: jXf315M_G10SQKa2786RG
+</code></pre>
+
+<p>With custom alphabet</p>
+
+<pre><code>var id = require('lite-id');
+console.log(id(15,{chars:'qwertyQWERTY1234567890',         
+                   strictCase: true}));
+//Result: 2wE5R5Q2qw9e49R4
 </code></pre>
 
       <footer class="site-footer">
