@@ -1,6 +1,5 @@
 # lite-id
-[![Build Status](https://travis-ci.org/imatveev/lite-id.svg?branch=master)](https://travis-ci.org/imatveev/lite-id)
-![](https://david-dm.org/imatveev/lite-id.svg)<br />
+[![Build Status](https://travis-ci.org/imatveev/lite-id.svg?branch=master)](https://travis-ci.org/imatveev/lite-id)<br />
 A simple nodejs module for generate unique string id.
 ## Installation
     npm install lite-id
@@ -8,9 +7,20 @@ A simple nodejs module for generate unique string id.
 You need to generate a simple unique id in code.
 ## API
     var id = require('lite-id);
-### id([length])
-Generates an id. Optional length is set resulting id length. Default length is 10.
-## Example
+### id([length],[options])
+Generates an id. Optional [length] is set resulting id length. Default length is 10.
+Optional [options] is an object with these defaults:
+
+    {chars:'abcdefghijkl-_mnopqrstuvwxyz',
+     strictCase: false
+    }
+You can specify characters by which your id will be generated using a variable chars.
+strictCase is a boolean that specifies whether to use your character set char strictly following case-sensitive,
+or randomize case (false - randomizes, true - strictly following case).
+## Tests
+Lite-id have a mocha test to find collisions of generated id. Test for 100,000 generations
+is passed and showed no conflicts.
+## Examples
 
 With default length
 
@@ -23,3 +33,10 @@ With custom length
     var id = require('lite-id')(20);
     console.log(id);
     //Result: jXf315M_G10SQKa2786RG
+    
+With custom alphabet
+
+    var id = require('lite-id');
+    console.log(id(15,{chars:'qwertyQWERTY1234567890',         
+                       strictCase: true}));
+    //Result: 2wE5R5Q2qw9e49R4
