@@ -19,8 +19,8 @@ You can specify characters by which your id will be generated using a variable c
 strictCase is a boolean that specifies whether to use your character set char strictly following case-sensitive,
 or randomize case (false - randomizes, true - strictly following case).
 ## Tests
-Lite-id have a mocha test to find collisions of generated id. Test for 100,000 generations of default length
-is passed and showed no conflicts.
+Lite-id have a mocha test to find collisions of generated id. Test for 1,000,000 generations of default length
+and default alphabet is passed and showed no conflicts.
 ## Examples
 
 With default length

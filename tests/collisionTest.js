@@ -10,7 +10,7 @@ function findCollisions(iterations){
     }
     return true;
 }
-
+console.log(findCollisions(1000000));
 /*describe('add', function(){
     it('there are no collisions', function(){
         assert.equal(findCollisions(1000), true);

@@ -19,6 +19,7 @@ function getChar(options) {
     }
     return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
+
 function getCase(char) {
     if (parseInt(randomByte()) % 2 === 0) {
         return char.toUpperCase();
@@ -29,21 +30,21 @@ function getCase(char) {
 }
 
 function getRandom(options) {
-        if (Math.floor(Math.random() * randomByte()) % 3 === 0 && (!options || options && !options.chars)) {
-            return randomByte();
+    if (Math.floor(Math.random() * randomByte()) % 3 === 0 && (!options || options && !options.chars)) {
+        return randomByte();
+    }
+    else {
+        if (options && options.strictCase) {
+            return getChar(options);
         }
         else {
-            if (options && options.strictCase) {
-                return getChar(options);
-            }
-            else {
-                return getCase(getChar(options));
-            }
+            return getCase(getChar(options));
         }
+    }
 }
 
 var uid = function (len, options) {
-    if(typeof len === 'object'){
+    if (typeof len === 'object') {
         options = len;
         len = false;
     }
