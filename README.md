@@ -7,6 +7,8 @@ A simple nodejs module for generate unique string id.
 You need to generate a simple unique id in code.
 ## API
     var id = require('lite-id);
+    console.log(id());
+    //Result: J6YgVpwp1929
 ### id([length],[options])
 Generates an id. Optional [length] is set resulting id length. Default length is 10.
 Optional [options] is an object with these defaults:
@@ -30,8 +32,8 @@ With default length
 
 With custom length
 
-    var id = require('lite-id')(20);
-    console.log(id);
+    var id = require('lite-id');
+    console.log(id(20));
     //Result: jXf315M_G10SQKa2786RG
     
 With custom alphabet

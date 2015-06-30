@@ -1,6 +1,6 @@
 {
   "name": "lite-id",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "A simple nodejs module for generate unique string id.",
   "main": "index.js",
   "scripts": {
