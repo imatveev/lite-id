@@ -16,3 +16,4 @@ describe('add', function(){
         assert.equal(findCollisions(200), true);
     });
 });
+

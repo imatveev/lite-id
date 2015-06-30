@@ -10,14 +10,8 @@ function randomByte() {
     return byte.toString()[0];
 }
 
-function getChar(options) {
-    var alphabet;
-    if (options && options.chars) {
-        alphabet = options.chars.split('');
-    }
-    else {
-        alphabet = 'abcdefghijkl-_mnopqrstuvwxyz'.split('');
-    }
+function getChar() {
+    var alphabet = 'abcdefghijkl-_mnopqrstuvwxyz'.split('');
     return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
@@ -30,31 +24,22 @@ function getCase(char) {
     }
 }
 
-function getRandom(options) {
-    if (Math.floor(Math.random() * randomByte()) % 3 === 0 && (!options || options && !options.chars)) {
+function getRandom() {
+    if (Math.floor(Math.random() * randomByte()) % 3 === 0) {
         return randomByte();
     }
     else {
-        if (options && options.strictCase) {
-            return getChar(options);
-        }
-        else {
-            return getCase(getChar(options));
-        }
+        return getCase(getChar());
     }
 }
 
-var uid = function (len, options) {
-    if (typeof len === 'object') {
-        options = len;
-        len = false;
-    }
+var uid = function (len) {
     var id = '';
     if (!len) {
         len = 10;
     }
     while (id.length < len) {
-        id += getRandom(options);
+        id += getRandom();
     }
     return id;
 };
