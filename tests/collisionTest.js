@@ -11,10 +11,8 @@ function findCollisions(iterations){
     return true;
 }
 
-/*describe('add', function(){
+describe('add', function(){
     it('there are no collisions', function(){
         assert.equal(findCollisions(200), true);
     });
-});*/
-
-console.log(id().length);
+});
