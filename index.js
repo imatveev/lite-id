@@ -6,7 +6,8 @@
 var crypto = require('crypto');
 
 function randomByte() {
-    return Math.floor(crypto.randomBytes(256)[0] / 10 ^ crypto.randomBytes(256)[0] / 10);
+    var byte = Math.floor(crypto.randomBytes(256)[0] / 10 ^ crypto.randomBytes(256)[0] / 10);
+    return byte.toString()[0];
 }
 
 function getChar(options) {
@@ -52,11 +53,8 @@ var uid = function (len, options) {
     if (!len) {
         len = 10;
     }
-    while (id.length <= len) {
+    while (id.length < len) {
         id += getRandom(options);
-    }
-    if (id.length > len) {
-        id.slice(0, -1);
     }
     return id;
 };
