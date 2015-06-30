@@ -1,9 +1,10 @@
 {
   "name": "lite-id",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "A simple nodejs module for generate unique string id.",
   "main": "index.js",
   "scripts": {
+    "test": "mocha tests/collisionTest.js"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,5 @@
 # lite-id
-[ ![Codeship Status for imatveev/lite-id](https://codeship.com/projects/edbbd010-fd35-0132-3eaa-5a06a30fe976/status?branch=master)](https://codeship.com/projects/87692)
-[![Build Status](https://travis-ci.org/imatveev/lite-id.svg?branch=master)](https://travis-ci.org/imatveev/lite-id)<br />
+[ ![Codeship Status for imatveev/lite-id](https://codeship.com/projects/edbbd010-fd35-0132-3eaa-5a06a30fe976/status?branch=master)](https://codeship.com/projects/87692)<br />
 A simple nodejs module for generate unique string id.
 ## Installation
     npm install lite-id
