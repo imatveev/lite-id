@@ -6,7 +6,7 @@ A simple nodejs module for generate unique string id.
 ## When should I use lite-id?
 You need to generate a simple unique id in code.
 ## API
-    var id = require('lite-id);
+    var id = require('lite-id');
     console.log(id());
     //Result: J6YgVpwp1929
 ### id([length])
