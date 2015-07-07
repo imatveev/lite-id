@@ -13,7 +13,7 @@ You need to generate a simple unique id in code.
 Generates an id. Optional [length] is set resulting id length. Default length is 10.
 ## Tests
 
-Lite-id have a mocha test to find collisions of generated id. Test for 1,000,000 generations of default length
+Lite-id have a mocha test to find collisions of generated id. Test for 3,000,000 generations of default length
 and default alphabet is passed and showed no conflicts.
 ## Examples
 

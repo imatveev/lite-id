@@ -17,3 +17,18 @@ describe('add', function(){
     });
 });
 
+function test(){
+    var start = Date.now();
+    var etalon = id();
+    for(var i=0; i<3000000; i++){
+        if(i%10000 == 0){
+            process.stdout.write('\033c');
+            process.stdout.write(i/30000+'%');
+        }
+        if(id() == etalon){
+            return false;
+        }
+    }
+    console.log(Date.now()-start);
+}
+//test();

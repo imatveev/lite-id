@@ -6,7 +6,7 @@
 var crypto = require('crypto');
 
 function randomByte() {
-    var byte = Math.floor(crypto.randomBytes(256)[0] / 10 ^ crypto.randomBytes(256)[0] / 10);
+    var byte = Math.floor(crypto.randomBytes(128)[0]);
     return byte.toString()[0];
 }
 
