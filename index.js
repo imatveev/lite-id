@@ -16,21 +16,11 @@ function getChar() {
 }
 
 function getCase(char) {
-    if (parseInt(randomByte()) % 2 === 0) {
-        return char.toUpperCase();
-    }
-    else {
-        return char;
-    }
+    return parseInt(randomByte()) % 2 === 0 ? char.toUpperCase() : char;
 }
 
 function getRandom() {
-    if (Math.floor(Math.random() * randomByte()) % 3 === 0) {
-        return randomByte();
-    }
-    else {
-        return getCase(getChar());
-    }
+    return Math.floor(Math.random() * randomByte()) % 3 === 0 ? randomByte() : getCase(getChar());
 }
 
 var uid = function (len) {

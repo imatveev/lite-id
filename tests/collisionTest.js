@@ -1,5 +1,5 @@
-var assert = require('assert');
 var id = require('../index.js');
+var assert = require('assert');
 
 function findCollisions(iterations){
     var basicID = id();
@@ -20,10 +20,10 @@ describe('add', function(){
 function test(){
     var start = Date.now();
     var etalon = id();
-    for(var i=0; i<3000000; i++){
+    for(var i=0; i<6000000; i++){
         if(i%10000 == 0){
             process.stdout.write('\033c');
-            process.stdout.write(i/30000+'%');
+            process.stdout.write(i/60000+'%');
         }
         if(id() == etalon){
             return false;
