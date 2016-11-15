@@ -5,7 +5,7 @@
     <title>Lite-id by imatveev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
@@ -20,24 +20,24 @@
 
     <section class="main-content">
       <h1>
-<a id="lite-id" class="anchor" href="#lite-id" aria-hidden="true"><span class="octicon octicon-link"></span></a>lite-id</h1>
+<a id="lite-id" class="anchor" href="#lite-id" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>lite-id</h1>
 
 <p><a href="https://travis-ci.org/imatveev/lite-id"><img src="https://travis-ci.org/imatveev/lite-id.svg?branch=master" alt="Build Status"></a><br>
 A simple nodejs module for generate unique string id.</p>
 
 <h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
 
 <pre><code>npm install lite-id
 </code></pre>
 
 <h2>
-<a id="when-should-i-use-lite-id" class="anchor" href="#when-should-i-use-lite-id" aria-hidden="true"><span class="octicon octicon-link"></span></a>When should I use lite-id?</h2>
+<a id="when-should-i-use-lite-id" class="anchor" href="#when-should-i-use-lite-id" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>When should I use lite-id?</h2>
 
 <p>You need to generate a simple unique id in code.</p>
 
 <h2>
-<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API</h2>
 
 <pre><code>var id = require('lite-id');
 console.log(id());
@@ -45,18 +45,22 @@ console.log(id());
 </code></pre>
 
 <h3>
-<a id="idlength" class="anchor" href="#idlength" aria-hidden="true"><span class="octicon octicon-link"></span></a>id([length])</h3>
+<a id="idlength" class="anchor" href="#idlength" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>id([length])</h3>
 
 <p>Generates an id. Optional [length] is set resulting id length. Default length is 10.</p>
 
 <h2>
-<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests</h2>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests</h2>
 
-<p>Lite-id have a mocha test to find collisions of generated id. Test for 3,000,000 generations of default length
-and default alphabet is passed and showed no conflicts.</p>
+<p>Lite-id have a mocha test to find collisions on generated id's. Test for 3,000,000 unique id's with default length
+and consist is passed and processed without conflicts.</p>
+
+<pre><code>npm test //standart test with 60K instances
+npm run extended_test //extended test with 3M instances
+</code></pre>
 
 <h2>
-<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h2>
 
 <p>With default length</p>
 
@@ -93,4 +97,3 @@ console.log(id(20));
 
   </body>
 </html>
-
