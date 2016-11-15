@@ -2,4 +2,4 @@ language: "node_js"
 node_js:
   - "7.1.0"
 
-script: "npm install lite-id"
+script: "npm test"
