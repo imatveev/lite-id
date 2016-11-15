@@ -2,37 +2,28 @@
 //
 //     Copyright (c) 2015 Ivan Matvieiev
 //     MIT License - http://opensource.org/licenses/mit-license.php
+'use strict';
 
-var crypto = require('crypto');
+const crypto = require('crypto');
 
-function randomByte() {
-    var byte = Math.floor(crypto.randomBytes(128)[0]);
-    return byte.toString()[0];
-}
+const randomByte = () => ~~crypto.randomBytes(1)[0].toString()[0];
 
-function getChar() {
-    var alphabet = 'abcdefghijkl-_mnopqrstuvwxyz'.split('');
-    return alphabet[Math.floor(Math.random() * alphabet.length)];
-}
+const getChar = () => {
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz-_ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    return alphabet[~~(Math.random() * alphabet.length)];
+};
 
-function getCase(char) {
-    return parseInt(randomByte()) % 2 === 0 ? char.toUpperCase() : char;
-}
+const getRandom = () => {
+    return randomByte() % 2 === 0 ? randomByte() : getChar();
+};
 
-function getRandom() {
-    return Math.floor(Math.random() * randomByte()) % 3 === 0 ? randomByte() : getCase(getChar());
-}
-
-var uid = function (len) {
-    var id = '';
-    if (!len) {
-        len = 10;
+const uid = (len, id) => {
+    len = len || 10;
+    id = id || '';
+    if(id.length === len) {
+        return id;
     }
-    while (id.length < len) {
-        id += getRandom();
-    }
-    return id;
+    return uid(len, id + getRandom());
 };
 
 module.exports = uid;
-

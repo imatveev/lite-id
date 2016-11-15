@@ -1,10 +1,11 @@
 {
   "name": "lite-id",
-  "version": "1.3.3",
+  "version": "2.0.0",
   "description": "A simple nodejs module for generate unique string id.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/collisionTest.js"
+    "test": "NODE_COLLISION_THRESHOLD=60000 mocha --timeout 45000",
+    "extended_test": "NODE_COLLISION_THRESHOLD=5000000 mocha --timeout 6000000000"
   },
   "repository": {
     "type": "git",

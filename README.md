@@ -13,8 +13,11 @@ You need to generate a simple unique id in code.
 Generates an id. Optional [length] is set resulting id length. Default length is 10.
 ## Tests
 
-Lite-id have a mocha test to find collisions of generated id. Test for 6,000,000 generations of default length
-and default alphabet is passed and showed no conflicts.
+Lite-id have a mocha test to find collisions on generated id's. Test for 3,000,000 unique id's with default length
+and consist is passed and processed without conflicts.
+
+    npm test //standart test with 60K instances
+    npm run extended_test //extended test with 3M instances
 ## Examples
 
 With default length
