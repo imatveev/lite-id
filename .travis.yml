@@ -2,5 +2,5 @@ language: "node_js"
 node_js:
   - "7.1.0"
 
-script: "sudo npm i mocha -g"
+before_script: "sudo npm i mocha -g"
 script: "npm test"
