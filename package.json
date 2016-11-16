@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_COLLISION_THRESHOLD=60000 mocha --timeout 45000",
-    "extended_test": "NODE_COLLISION_THRESHOLD=5000000 mocha --timeout 6000000000"
+    "extended_test": "NODE_COLLISION_THRESHOLD=3000000 mocha --timeout 6000000000"
   },
   "repository": {
     "type": "git",
