@@ -17,7 +17,7 @@ Lite-id have a mocha test to find collisions on generated id's. Test for 3,000,0
 and consist is passed and processed without conflicts.
 
     npm test //standart test with 60K instances
-    npm run extended_test //extended test with 3M instances.
+    npm run extended_test //extended test with 3M instances
 ## Examples
 
 With default length
